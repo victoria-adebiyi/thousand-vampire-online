@@ -1,3 +1,18 @@
-#OS specific
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/tests
+jest.config.js
+
+# misc
 .DS_Store
-.DS_Store?
+*.pem
+
+# debug
+npm-debug.log*
+
+# local env files
+.env*.local

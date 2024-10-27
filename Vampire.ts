@@ -1,4 +1,12 @@
-class Vampire {
+import { AbstractPromptTrait } from "./AbstractPromptTrait";
+import { Character } from "./Character";
+import { Experience } from "./Experience";
+import { Mark } from "./Mark";
+import { Memory } from "./Memory";
+import { Resource } from "./Resource";
+import { Skill } from "./Skill";
+
+export class Vampire {
     promptNumber: number;
     draftExperience: Experience;
     memories: Array<Memory>;
@@ -37,5 +45,22 @@ class Vampire {
             this.promptNumber = this.promptNumber + move;
             return "Rolled " + move.toString + ", moved to Prompt #" + this.promptNumber;
         }
+    }
+
+    getPrompt(): string {
+        // TODO
+        return "";
+    }
+
+    writeExperience(description: string): void {
+        if (this.draftExperience) {
+            this.draftExperience.modifyDescription(description);
+        } else {
+            this.draftExperience = new Experience(description);
+        }
+    }
+
+    addTraitToExperience(trait: AbstractPromptTrait): void {
+        this.draftExperience.addTrait(trait);
     }
 }

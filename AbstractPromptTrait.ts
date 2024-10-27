@@ -1,4 +1,6 @@
-abstract class AbstractPromptTrait extends AbstractTrait {
+import { AbstractTrait } from "./AbstractTrait";
+
+export abstract class AbstractPromptTrait extends AbstractTrait {
     description: string;
 
     canAdd(): boolean {
@@ -6,6 +8,10 @@ abstract class AbstractPromptTrait extends AbstractTrait {
     }
 
     add(): void {
+        return;
+    }
+
+    remove(): void {
         return;
     }
 }

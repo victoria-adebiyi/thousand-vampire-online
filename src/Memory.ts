@@ -1,6 +1,6 @@
 import { AbstractTrait } from "./AbstractTrait";
 import { Experience } from "./Experience";
-import { objectsEqual } from "./Utilities";
+import { objectsEqual } from "./utils/Utilities";
 
 export class Memory extends AbstractTrait {
     experiences: Array<Experience>;

@@ -1,5 +1,5 @@
 import { AbstractPromptTrait } from "./AbstractPromptTrait";
-import { objectsEqual } from "./Utilities";
+import { objectsEqual } from "./utils/Utilities";
 
 export class Experience {
     description: string;
